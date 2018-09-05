@@ -2,12 +2,12 @@
 #include<cstdlib>
 #include<cstring>
 #include<cstdio>
+#include<string>
 #include<cmath>
-#include<queue>
 #include<algorithm>
 using namespace std;
 string str;
-priority_queue<int>que;
+int interval[1001];
 int data[1001];
 int main()
 {
@@ -16,39 +16,39 @@ int main()
     while(cin>>str)
     {
         int len=str.length();
-        int x=0;
-        int cnt=0;
-        int st=0;
-        while(str[st]=='5')
+
+        int cnt=1;
+        interval[1]=-1;
+        for(int i=0;i<len;i++)
         {
-            st++;
-        }
-        for(int i=st;i<len;i++)
-        {
-            if(str[i]!='5')
+            if(str[i]=='5')
             {
-                x=x*10+str[i]-'0';
-            }
-            else
-            {
-                que.push(x);
-                x=0;
+                interval[++cnt]=i;
             }
         }
-        if(str[len-1]!='5')
+        interval[++cnt]=len;
+
+        int num=0;
+        for(int i=1;i<cnt;i++)
         {
-            que.push(x);
+            int x=0;
+            for(int j=interval[i]+1;j<interval[i+1];j++)
+            {
+                x=x*10+str[j]-'0';
+            }
+            if(interval[i]+1!=interval[i+1])
+            {
+                data[++num]=x;
+            }
         }
-        while(!que.empty())
-        {
-            data[++cnt]=que.top();
-            que.pop();
-        }
-        for(int i=cnt;i>=1;i--)
+
+        sort(data+1,data+1+num);
+
+        for(int i=1;i<num;i++)
         {
             cout<<data[i]<<" ";
         }
-        cout<<endl;
+        cout<<data[num]<<endl; 
     }
     return 0;
 }
