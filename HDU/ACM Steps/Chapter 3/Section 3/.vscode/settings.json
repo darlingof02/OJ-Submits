@@ -11,7 +11,8 @@
         "stdexcept": "cpp",
         "type_traits": "cpp",
         "typeinfo": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "iostream": "cpp"
     },
     "editor.insertSpaces": false,
     "editor.fontSize": 20
