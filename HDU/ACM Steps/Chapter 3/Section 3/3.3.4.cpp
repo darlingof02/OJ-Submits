@@ -18,11 +18,11 @@ int dp[101];
 int main()
 {
     freopen("test.in","r",stdin);
-    freopen("test.out","w",stdout);
+    freopen("test.out","w",stdout);                     
     scanf("%d",&C);
     while(C--)
     {
-        int n,m;
+         int n,m;
         scanf("%d %d",&n,&m);  //n：经费金额 m：大米种类
         for(int i=1;i<=m;i++)
         {

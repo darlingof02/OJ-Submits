@@ -9,7 +9,7 @@ int n,m;
 int cnt;
 int ans;
 struct object
-{
+{              
     int weight;
     int value;
     int count;
@@ -23,7 +23,7 @@ int main()
     while(~scanf("%d %d",&n,&m))
     {
         if(!n&&!m) break;
-        cnt=0,ans=0;
+        cnt=0,ans=0;    
         memset(dp,0,sizeof(dp));
         for(int i=1;i<=n;i++)
         {
