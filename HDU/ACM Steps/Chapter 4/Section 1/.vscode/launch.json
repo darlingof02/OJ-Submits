@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug(LLDB)",
+            "name": "Debug(GDB/LLDB)",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceRoot}/main", //调试，也就是运行main文件
