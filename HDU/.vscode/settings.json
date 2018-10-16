@@ -13,7 +13,8 @@
         "typeinfo": "cpp",
         "algorithm": "cpp",
         "iostream": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "ratio": "cpp"
     },
     "editor.insertSpaces": false,
     "editor.fontSize": 20
